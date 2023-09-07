@@ -94,6 +94,7 @@ class EnvironmentManager
     {
         $results = trans('installer_messages.environment.success');
         try {
+            $this->getEnvContent;
             $envFilePath = $this->envPath;
             $envFileData = file_get_contents($envFilePath);
             $envFileData = str_replace([
