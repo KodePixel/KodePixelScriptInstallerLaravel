@@ -4,7 +4,7 @@ namespace Kode\PixelPayload\Middleware;
 
 use Closure;
 
-class canUpdate
+class CanUpdate
 {
     use \Kode\PixelPayload\Helpers\MigrationsHelper;
 

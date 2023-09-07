@@ -7,7 +7,7 @@ use Redirect;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema; 
 
-class canInstall
+class CanInstall
 {
     /**
      * Handle an incoming request.
