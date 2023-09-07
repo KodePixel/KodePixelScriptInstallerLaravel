@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Helpers;
+namespace Kode\PixelPayload\Helpers;
 
 class InstalledFileManager
 {

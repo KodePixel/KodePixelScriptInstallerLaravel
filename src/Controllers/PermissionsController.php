@@ -1,9 +1,9 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Controllers;
+namespace Kode\PixelPayload\Controllers;
 
 use Illuminate\Routing\Controller;
-use Alex\LaravelDocSchema\Helpers\PermissionsChecker;
+use Kode\PixelPayload\Helpers\PermissionsChecker;
 
 class PermissionsController extends Controller
 {

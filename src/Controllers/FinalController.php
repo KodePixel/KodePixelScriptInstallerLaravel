@@ -1,21 +1,21 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Controllers;
+namespace Kode\PixelPayload\Controllers;
 
 use Illuminate\Routing\Controller;
-use Alex\LaravelDocSchema\Events\LaravelInstallerFinished;
-use Alex\LaravelDocSchema\Helpers\EnvironmentManager;
-use Alex\LaravelDocSchema\Helpers\FinalInstallManager;
-use Alex\LaravelDocSchema\Helpers\InstalledFileManager;
+use Kode\PixelPayload\Events\LaravelInstallerFinished;
+use Kode\PixelPayload\Helpers\EnvironmentManager;
+use Kode\PixelPayload\Helpers\FinalInstallManager;
+use Kode\PixelPayload\Helpers\InstalledFileManager;
 
 class FinalController extends Controller
 {
     /**
      * Update installed file and display finished view.
      *
-     * @param \Alex\LaravelDocSchema\Helpers\InstalledFileManager $fileManager
-     * @param \Alex\LaravelDocSchema\Helpers\FinalInstallManager $finalInstall
-     * @param \Alex\LaravelDocSchema\Helpers\EnvironmentManager $environment
+     * @param \Kode\PixelPayload\\Helpers\InstalledFileManager $fileManager
+     * @param \Kode\PixelPayload\\Helpers\FinalInstallManager $finalInstall
+     * @param \Kode\PixelPayload\\Helpers\EnvironmentManager $environment
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function finish(InstalledFileManager $fileManager, FinalInstallManager $finalInstall, EnvironmentManager $environment)

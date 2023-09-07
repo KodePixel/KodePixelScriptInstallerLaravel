@@ -1,10 +1,10 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Controllers;
+namespace Kode\PixelPayload\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
-use Alex\LaravelDocSchema\Helpers\DatabaseManager;
+use Kode\PixelPayload\Helpers\DatabaseManager;
 use Illuminate\Support\Facades\DB;
 
 class DatabaseController extends Controller

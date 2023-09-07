@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Controllers;
+namespace Kode\PixelPayload\Controllers;
 
 use Illuminate\Routing\Controller;
 

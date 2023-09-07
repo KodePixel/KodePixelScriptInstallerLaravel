@@ -1,14 +1,14 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Controllers;
+namespace Kode\PixelPayload\Controllers;
 
 use Illuminate\Routing\Controller;
-use Alex\LaravelDocSchema\Helpers\DatabaseManager;
-use Alex\LaravelDocSchema\Helpers\InstalledFileManager;
+use Kode\PixelPayload\Helpers\DatabaseManager;
+use Kode\PixelPayload\Helpers\InstalledFileManager;
 
 class UpdateController extends Controller
 {
-    use \Alex\LaravelDocSchema\Helpers\MigrationsHelper;
+    use \Kode\PixelPayload\Helpers\MigrationsHelper;
 
     /**
      * Display the updater welcome page.

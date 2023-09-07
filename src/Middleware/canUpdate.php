@@ -1,12 +1,12 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Middleware;
+namespace Kode\PixelPayload\Middleware;
 
 use Closure;
 
 class canUpdate
 {
-    use \Alex\LaravelDocSchema\Helpers\MigrationsHelper;
+    use \Kode\PixelPayload\Helpers\MigrationsHelper;
 
     /**
      * Handle an incoming request.

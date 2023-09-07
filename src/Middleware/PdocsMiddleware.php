@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Middleware;
+namespace Kode\PixelPayload\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

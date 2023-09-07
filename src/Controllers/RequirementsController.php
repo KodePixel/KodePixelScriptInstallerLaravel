@@ -1,9 +1,9 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Controllers;
+namespace Kode\PixelPayload\Controllers;
 
 use Illuminate\Routing\Controller;
-use Alex\LaravelDocSchema\Helpers\RequirementsChecker; 
+use Kode\PixelPayload\Helpers\RequirementsChecker; 
 
 class RequirementsController extends Controller
 {

@@ -1,11 +1,11 @@
 {
-    "name": "pdocs/laravel-docschema-nlic",
-    "description": "Laravel simple web doc schema",
+    "name": "kodepixel/phpscript-installer",
+    "description": "Simple Laravel Installer Package by KodePixel",
     "license": "MIT",
     "authors": [
         {
-            "name": "Alex Lim",
-            "email": "amarlim@gmail.com"
+            "name": "Rup Deb",
+            "email": "rup@kodepixel.com"
         } 
     ],
     "credit": [
@@ -14,11 +14,11 @@
         } 
     ],
     "require": {
-        "php": ">=7.4"
+        "php": ">=8.1"
     },
     "autoload": {
         "psr-4": {
-            "Alex\\LaravelDocSchema\\": "src/"
+            "Kode\\PixelPayload\\": "src/"
         },
         "files": [
             "src/Helpers/functions.php"
@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Alex\\LaravelDocSchema\\Providers\\LaravelDocSchemaServiceProvider"
+                "Kode\\PixelPayload\\Providers\\ServiceProvider"
             ]
         }
     },

@@ -1,15 +1,15 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Controllers;
+namespace Kode\PixelPayload\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
-use Alex\LaravelDocSchema\Events\EnvironmentSaved;
-use Alex\LaravelDocSchema\Helpers\EnvironmentManager;
-use Alex\LaravelDocSchema\Events\LaravelInstallerFinished;
+use Kode\PixelPayload\Events\EnvironmentSaved;
+use Kode\PixelPayload\Helpers\EnvironmentManager;
+use Kode\PixelPayload\Events\LaravelInstallerFinished;
 use Validator;
 
 class EnvironmentController extends Controller

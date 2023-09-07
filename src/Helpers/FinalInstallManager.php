@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Helpers;
+namespace Kode\PixelPayload\Helpers;
 
 use Exception;
 use Illuminate\Support\Facades\Artisan;

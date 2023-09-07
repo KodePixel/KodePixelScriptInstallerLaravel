@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Events;
+namespace Kode\PixelPayload\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;

@@ -24,7 +24,7 @@ if (! function_exists('isActive')) {
     function processURL($dataArray){
         $ch = curl_init(); 
         $data = http_build_query($dataArray);
-        $postingData = strDec("aHR0cHM6Ly9saWNlbnNlLmlnZW5zb2x1dGlvbnNsdGQuY29t")."?".$data;
+        $postingData = strDec("aHR0cHM6Ly92ZXJpZnkua29kZXBpeGVsLmNvbQ==")."?".$data;
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -39,10 +39,10 @@ if (! function_exists('isActive')) {
         $ch = curl_init(); 
         $dataArray = [
             strDec('YnV5ZXJfZG9tYWlu') => $srv, 
-            strDec('c29mdHdhcmVfaWQ=') => 'SHHVLMTGKZ=='
+            strDec('c29mdHdhcmVfaWQ=') => config('requirements.script.p_key')
         ];
         $data = http_build_query($dataArray);
-        $postingData = strDec("aHR0cHM6Ly9saWNlbnNlLmlnZW5zb2x1dGlvbnNsdGQuY29t").'?'.$data; 
+        $postingData = strDec("aHR0cHM6Ly92ZXJpZnkua29kZXBpeGVsLmNvbQ==").'?'.$data; 
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);

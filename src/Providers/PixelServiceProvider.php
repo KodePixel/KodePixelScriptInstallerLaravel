@@ -1,18 +1,18 @@
 <?php
 
-namespace Alex\LaravelDocSchema\Providers;
+namespace Kode\PixelPayload\Providers;
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Alex\LaravelDocSchema\Middleware\canInstall;
-use Alex\LaravelDocSchema\Middleware\canUpdate;
-use Alex\LaravelDocSchema\Middleware\PdocsMiddleware;
+use Kode\PixelPayload\Middleware\canInstall;
+use Kode\PixelPayload\Middleware\canUpdate;
+use Kode\PixelPayload\Middleware\PdocsMiddleware;
 use Illuminate\Support\Facades\DB;
 use Schema;
 
 
-class LaravelDocSchemaServiceProvider extends ServiceProvider
+class PixelServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
