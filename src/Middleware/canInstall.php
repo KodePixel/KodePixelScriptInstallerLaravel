@@ -37,7 +37,7 @@ class canInstall
                 case 'dump':
                     try {
                         DB::connection()->getPdo();
-                            if(!Schema::hasTable(config('requirements.core.dbTbl'))) {
+                            if(!Schema::hasTable(strDec(config('requirements.core.dbTbl')))) {
                                 $title = 'Database Connection';
                                 $message = config('requirements.installed.redirectOptions.dump.database');
                                 return view('pdo::error',compact('title','message')); 
@@ -71,14 +71,14 @@ class canInstall
      */
     public function alreadyInstalled()
     {
-        return file_exists(storage_path(config('requirements.core.cacheFile')));
+        return file_exists(storage_path(srtDec(config('requirements.core.cacheFile'))));
     }
 
     public function checkDb()
     {
         try {
             DB::connection()->getPdo();
-            if(!Schema::hasTable(config('requirements.core.dbTbl'))) {
+            if(!Schema::hasTable(strDec(config('requirements.core.dbTbl')))) {
                 $title = 'Database Connection';
                 $message = config('requirements.installed.redirectOptions.dump.database');
                 return view('pdo::error',compact('title','message')); 

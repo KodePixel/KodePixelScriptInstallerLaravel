@@ -11,7 +11,7 @@ class InstalledFileManager
      */
     public function create()
     {
-        $installedLogFile = storage_path(config('requirements.core.cacheFile'));
+        $installedLogFile = storage_path(strDec(config('requirements.core.cacheFile')));
          
         $dateStamp = date('Y/m/d h:i:sa');
 

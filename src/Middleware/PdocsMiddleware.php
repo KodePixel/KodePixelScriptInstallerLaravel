@@ -18,12 +18,12 @@ class PdocsMiddleware
     public function handle(Request $request, Closure $next)
     {
         try { 
-            $installedLogFile = storage_path(config('requirements.core.cacheFile'));
+            $installedLogFile = storage_path(strDec(config('requirements.core.cacheFile')));
             if (! file_exists($installedLogFile)) {
                 return redirect()->to(url('/').strDec('L2luc3RhbGw='));
             }
             DB::connection()->getPdo();
-            if(!Schema::hasTable(config('requirements.core.dbTbl'))) {
+            if(!Schema::hasTable(strDec(config('requirements.core.dbTbl')))) {
                 if(file_exists($installedLogFile)){
                     @unlink($installedLogFile); 
                 }
