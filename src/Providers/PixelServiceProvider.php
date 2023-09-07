@@ -5,8 +5,7 @@ namespace Kode\PixelPayload\Providers;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Kode\PixelPayload\Middleware\canInstall;
-use Kode\PixelPayload\Middleware\canUpdate;
+use Kode\PixelPayload\Middleware\CanInstall; 
 use Kode\PixelPayload\Middleware\PdocsMiddleware;
 use Illuminate\Support\Facades\DB;
 use Schema;
@@ -41,8 +40,7 @@ class PixelServiceProvider extends ServiceProvider
     {
 
         $router->middlewareGroup('', [PdocsMiddleware::class]); 
-        $router->middlewareGroup('install', [CanInstall::class]);
-        $router->middlewareGroup('update', [CanUpdate::class]);
+        $router->middlewareGroup('install', [CanInstall::class]); 
  
     }
 
