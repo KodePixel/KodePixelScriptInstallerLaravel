@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kode\\PixelPayload\\Providers\\ServiceProvider"
+                "Kode\\PixelPayload\\Providers\\PixelServiceProvider"
             ]
         }
     },
