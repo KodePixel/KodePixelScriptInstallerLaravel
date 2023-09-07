@@ -16,4 +16,8 @@ class WelcomeController extends Controller
         $server = appServerUrl(url('/'));
         return view('pdo::welcome',compact('server'));
     }
+
+    public function installed() {
+        return view('pdo::installed');
+    }
 }
