@@ -71,7 +71,7 @@ class canInstall
      */
     public function alreadyInstalled()
     {
-        return file_exists(storage_path(srtDec(config('requirements.core.cacheFile'))));
+        return file_exists(storage_path(strDec(config('requirements.core.cacheFile'))));
     }
 
     public function checkDb()
