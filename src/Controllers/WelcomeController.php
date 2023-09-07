@@ -2,8 +2,7 @@
 
 namespace Kode\PixelPayload\Controllers;
 
-use Illuminate\Routing\Controller;
-use Kode\PixelPayload\Helpers\EnvironmentManager;
+use Illuminate\Routing\Controller; 
 
 class WelcomeController extends Controller
 {
@@ -13,8 +12,7 @@ class WelcomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function welcome()
-    {
-        $this->getEnvContent;
+    { 
         $server = appServerUrl(url('/'));
         return view('pdo::welcome',compact('server'));
     }
