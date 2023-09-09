@@ -11,7 +11,7 @@
 
 @section('container')
     <p class="text-center">
-      {{!! trans('installer_messages.final.finished') !!}} 
+      {!! trans('installer_messages.final.finished') !!}
     </p>
     <br>
     <p class="text-center">

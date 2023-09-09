@@ -6,9 +6,9 @@ Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' =
         'uses' => 'WelcomeController@welcome',
     ]);
 
-    Route::get('installed', [
-        'as' => 'welcome',
-        'uses' => 'WelcomeController@installed',
+    Route::get('done', [
+        'as' => 'done',
+        'uses' => 'WelcomeController@installedDone',
     ]);
 
 

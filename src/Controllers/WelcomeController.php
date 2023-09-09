@@ -17,7 +17,7 @@ class WelcomeController extends Controller
         return view('pdo::welcome',compact('server'));
     }
 
-    public function installed() {
+    public function installedDone() {
         return view('pdo::installed');
     }
 }
