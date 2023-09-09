@@ -14,8 +14,11 @@ return [
     'core' => [
         'appVersion' => '1.0',
         'minPhpVersion' => '8.1',
-        'dbTbl' => strDec('Z2VuZXJhbF9zZXR0aW5ncw=='),
-        'cacheFile' => strDec('X2ZpbGVjYWNoZWluZw=='),
+        'dbTbl' => 'Z2VuZXJhbF9zZXR0aW5ncw==',
+        'cacheFile' => 'LktvZGVfUGl4ZWw=',
+    ],
+  	'script' => [
+    	'p_key' => 'PXL0001=='
     ],
     'final' => [
         'key' => true,
@@ -109,7 +112,7 @@ return [
     'installed' => [
         'redirectOptions' => [
             'route' => [
-                'name' => 'dashboard',
+                'name' => 'LaravelInstaller::done',
                 'data' => [],
             ],
             'abort' => [
@@ -131,7 +134,7 @@ return [
     | route, abort, dump, 404, default, ''
     |
     */
-    'installedAlreadyAction' => 'dump',
+    'installedAlreadyAction' => 'route',
 
     /*
     |--------------------------------------------------------------------------
