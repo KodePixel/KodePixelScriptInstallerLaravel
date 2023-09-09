@@ -20,10 +20,9 @@ class FinalController extends Controller
      */
     public function finish(InstalledFileManager $fileManager, FinalInstallManager $finalInstall, EnvironmentManager $environment)
     {
-        $finalMessages = $finalInstall->runFinal();
-        $finalStatusMessage = $fileManager->update();
-        $finalEnvFile = $environment->getEnvContent(); 
-        event(new LaravelInstallerFinished);
-        return view('pdo::finished', compact('finalMessages', 'finalStatusMessage', 'finalEnvFile'));
+
+
+
+        return view('pdo::finished');
     }
 }

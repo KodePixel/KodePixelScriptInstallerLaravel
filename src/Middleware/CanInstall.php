@@ -24,10 +24,8 @@ class CanInstall
             switch ($installedRedirect) {
 
                 case 'route':
-                    dd(config('requirements.installed.redirectOptions.route.message'));
-                    $routeName = config('requirements.installed.redirectOptions.route.name');
-                    $data = config('requirements.installed.redirectOptions.route.message');
-                    return redirect()->route($routeName)->with(['data' => $data]);
+                
+                    return redirect()->route('admin.login')->with('success','Already Installed');
                     break;
 
                 case 'abort':

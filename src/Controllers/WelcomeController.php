@@ -13,6 +13,7 @@ class WelcomeController extends Controller
      */
     public function welcome()
     { 
+    
         $server = appServerUrl(url('/'));
         return view('pdo::welcome',compact('server'));
     }

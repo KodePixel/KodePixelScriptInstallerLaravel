@@ -92,9 +92,19 @@ class EnvironmentManager
      */
     public function saveFileWizard(Request $request)
     {
-        $results = trans('installer_messages.environment.success');
+        $status = true;
         try {
             $envFilePath = $this->envPath;
+            $envExampleFilePath = $this->envExamplePath;
+
+            file_put_contents($envFilePath, '');
+
+            $envExampleData = file_get_contents($envExampleFilePath);
+
+   
+            file_put_contents($envFilePath, $envExampleData);
+
+
             $envFileData = file_get_contents($envFilePath);
             $envFileData = str_replace([
                 'APP_NAME=Laravel',
@@ -121,10 +131,12 @@ class EnvironmentManager
                 'DB_USERNAME="'.$request->input('database_username').'"',
                 'DB_PASSWORD="'.$request->input('database_password').'"'
             ], $envFileData);
+
             file_put_contents($envFilePath, $envFileData);
         } catch (Exception $e) {
-            $results = trans('installer_messages.environment.errors');
+            $status = false;
         }
-        return $results;
+
+        return $status;
     } 
 }

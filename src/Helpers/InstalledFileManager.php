@@ -23,6 +23,9 @@ class InstalledFileManager
             file_put_contents($installedLogFile, $message.PHP_EOL, FILE_APPEND | LOCK_EX);
         }
         return $message;
+
+
+
     }
 
     /**
