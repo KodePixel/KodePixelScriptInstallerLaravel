@@ -14,11 +14,9 @@ return [
     'core' => [
         'appVersion' => '1.0',
         'minPhpVersion' => '8.1',
-        'dbTbl' => 'Z2VuZXJhbF9zZXR0aW5ncw==',
+        'softwareId' => 'TEEMXSENMT==',
         'cacheFile' => 'LktvZGVfUGl4ZWw=',
-    ],
-  	'script' => [
-    	'p_key' => 'PXL0001=='
+        'dbTbl' => 'c2V0dGluZ3M',
     ],
     'final' => [
         'key' => true,
@@ -32,13 +30,11 @@ return [
             'tokenizer',
             'JSON',
             'cURL',
-            'gd',
         ],
         'apache' => [
             'mod_rewrite',
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Folders Permissions
@@ -50,12 +46,11 @@ return [
     */
     'permissions' => [
         '.env'     => '666',
+        'config/timesetup.php'  => '666',
         'storage/framework/'     => '775',
         'storage/logs/'          => '775',
         'bootstrap/cache/'       => '775',
-        'resources/lang/'        => '775',
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Environment Form Wizard Validation Rules & Messages
@@ -80,27 +75,26 @@ return [
                 'database_username'     => 'required|string|max:50',
                 'database_password'     => 'nullable|string|max:50',
                 // 'envato_key'            => 'required|string|max:100',
-                // 'email_id'              => 'nullable|string|max:50',
+                'email_id'              => 'nullable|string|max:50',
                 'broadcast_driver'      => 'required|string|max:50',
                 'cache_driver'          => 'required|string|max:50',
                 'session_driver'        => 'required|string|max:50',
                 'queue_driver'          => 'required|string|max:50',
                 'redis_hostname'        => 'required|string|max:50',
-                'redis_password'        => 'required|string|max:50',
+                'redis_password'        => 'nullable|string|max:50',
                 'redis_port'            => 'required|numeric',
                 'mail_driver'           => 'required|string|max:50',
                 'mail_host'             => 'required|string|max:50',
                 'mail_port'             => 'required|string|max:50',
-                'mail_username'         => 'required|string|max:50',
-                'mail_password'         => 'required|string|max:50',
-                'mail_encryption'       => 'required|string|max:50',
+                'mail_username'         => 'nullable|string|max:50',
+                'mail_password'         => 'nullable|string|max:50',
+                'mail_encryption'       => 'nullable|string|max:50',
                 'pusher_app_id'         => 'max:50',
                 'pusher_app_key'        => 'max:50',
                 'pusher_app_secret'     => 'max:50',
             ],
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Installed Middleware Options
@@ -112,7 +106,7 @@ return [
     'installed' => [
         'redirectOptions' => [
             'route' => [
-                'name' => 'LaravelInstaller::done',
+                'name' => 'dashboard',
                 'data' => [],
             ],
             'abort' => [
@@ -123,7 +117,6 @@ return [
             ],
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Selected Installed Middleware Option
@@ -135,7 +128,6 @@ return [
     |
     */
     'installedAlreadyAction' => 'route',
-
     /*
     |--------------------------------------------------------------------------
     | Updater Enabled
@@ -146,5 +138,4 @@ return [
     |
     */
     'updaterEnabled' => 'true',
-
 ];
