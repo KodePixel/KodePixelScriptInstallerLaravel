@@ -92,25 +92,16 @@ class EnvironmentManager
      */
     public function saveFileWizard(Request $request)
     {
+        #changed
         $status = true;
         try {
             $envFilePath = $this->envPath;
-            $envExampleFilePath = $this->envExamplePath;
-
-            file_put_contents($envFilePath, '');
-
-            $envExampleData = file_get_contents($envExampleFilePath);
-
-   
-            file_put_contents($envFilePath, $envExampleData);
-
-
             $envFileData = file_get_contents($envFilePath);
             $envFileData = str_replace([
-                'APP_NAME=Laravel',
-                'APP_ENV=local',
-                'APP_KEY=base64:t2wZGSpe9Jj3py7uFcftBOzrNc+wxnqRhWjqORGWkYI=',
-                'APP_DEBUG=false',
+                'APP_NAME=',
+                'APP_ENV=',
+                'APP_KEY=base64:sEe+3RY8GysxAufbesdqY70UDaZEvNfyKH/xm0DLKmw=',
+                'APP_DEBUG=',
                 'APP_URL=',
                 'DB_CONNECTION=',
                 'DB_HOST=',
@@ -122,7 +113,7 @@ class EnvironmentManager
                 'APP_NAME='.$request->input('app_name'),
                 'APP_ENV='.$request->input('environment'),
                 'APP_KEY='.'base64:'.base64_encode(Str::random(32)),
-                'APP_DEBUG='.$request->input('app_debug'),
+                'APP_DEBUG=false',
                 'APP_URL='.$request->input('app_url'),
                 'DB_CONNECTION='.$request->input('database_connection'),
                 'DB_HOST='.$request->input('database_hostname'),
@@ -131,12 +122,10 @@ class EnvironmentManager
                 'DB_USERNAME="'.$request->input('database_username').'"',
                 'DB_PASSWORD="'.$request->input('database_password').'"'
             ], $envFileData);
-
             file_put_contents($envFilePath, $envFileData);
         } catch (Exception $e) {
             $status = false;
         }
-
         return $status;
     } 
 }
