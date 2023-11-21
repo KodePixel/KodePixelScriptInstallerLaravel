@@ -20,37 +20,22 @@ class CanInstall
     {
         if ($this->alreadyInstalled()) {
             $installedRedirect = config('requirements.installedAlreadyAction');
-
             switch ($installedRedirect) {
-
                 case 'route':
-                
                     return redirect()->route('admin.login')->with('success','Already Installed');
                     break;
-
                 case 'abort':
                     abort(config('requirements.installed.redirectOptions.abort.type'));
                     break;
-
                 case 'dump':
                     try {
                         DB::connection()->getPdo();
                             if(!Schema::hasTable(strDec(config('requirements.core.dbTbl')))) {
-                                $title = 'Database Connection';
-                                $message = config('requirements.installed.redirectOptions.dump.database');
-                                return view('pdo::error',compact('title','message')); 
                             }else{
-                                $title = 'Software Setup';
-                                $message = config('requirements.installed.redirectOptions.dump.data');
-                                return view('pdo::error',compact('title','message'));
                             }
                         } catch (\Exception $e) {
-                            $title = 'Database Connection Exception';
-                            $message = $e->getMessage();
-                            return view('pdo::error',compact('title','message')); 
-                        }  
+                        }
                     break;
-
                 case '404':
                 case 'default':
                 default:
@@ -58,10 +43,8 @@ class CanInstall
                     break;
             }
         }
-
         return $next($request);
     }
-
     /**
      * If application is already installed.
      *
@@ -71,7 +54,6 @@ class CanInstall
     {
         return file_exists(storage_path(strDec(config('requirements.core.cacheFile'))));
     }
-
     public function checkDb()
     {
         try {
@@ -79,12 +61,12 @@ class CanInstall
             if(!Schema::hasTable(strDec(config('requirements.core.dbTbl')))) {
                 $title = 'Database Connection';
                 $message = config('requirements.installed.redirectOptions.dump.database');
-                return view('pdo::error',compact('title','message')); 
+                return view('pdo::error',compact('title','message'));
             }
         } catch (\Exception $e) {
             $title = 'Database Connection Exception';
             $message = $e->getMessage();
-            return view('pdo::error',compact('title','message')); 
-        }        
+            return view('pdo::error',compact('title','message'));
+        }
     }
 }
